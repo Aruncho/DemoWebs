@@ -92,6 +92,11 @@
   <main>
     <!-- Hero -->
     <section id="inicio" class="hero">
+      <!-- Carrusel de fotos de fondo (cambia solo cada pocos segundos) -->
+      <div class="hero__slides" aria-hidden="true">
+        <div class="hero__slide hero__slide--1 is-active"></div>
+        <div class="hero__slide hero__slide--2"></div>
+      </div>
       <div class="container hero__inner">
         <div class="hero__copy">
           <h1 class="hero__title">
@@ -266,6 +271,21 @@
         if (!searchForm.contains(e.target) && !searchBtn.contains(e.target)) closeSearch();
       });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSearch(); });
+    })();
+
+    // Carrusel del hero: pasa a la siguiente foto cada 6 segundos
+    (function () {
+      var slides = document.querySelectorAll('.hero__slide');
+      if (slides.length < 2) return;
+      // Si el usuario pidió menos animaciones en su sistema, se queda en la primera foto
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var actual = 0;
+      setInterval(function () {
+        if (document.hidden) return;   // no cambia mientras la pestaña está oculta
+        slides[actual].classList.remove('is-active');
+        actual = (actual + 1) % slides.length;
+        slides[actual].classList.add('is-active');
+      }, 6000);
     })();
   </script>
 </body>

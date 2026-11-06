@@ -260,14 +260,49 @@ body.no-scroll { overflow: hidden; }
 /* ---------- Hero ---------- */
 .hero {
   background-color: var(--bg-page);
-  background-image:
-    linear-gradient(180deg, rgba(0,0,0,.7) 0%, rgba(0,0,0,.3) 25%, rgba(0,0,0,0) 45%),
-    linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.45) 32%, rgba(0,0,0,0) 55%),
-    url("../img/hero.png");
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  isolation: isolate;   /* las capas de fotos y degradado quedan dentro del hero */
+}
+
+/* Carrusel: las fotos van apiladas y se cambian con un fundido (opacity) */
+.hero__slides {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+.hero__slide {
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: 70% 75%;
   background-repeat: no-repeat;
-  border-bottom: 1px solid var(--line);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.hero__slide.is-active { opacity: 1; }
+.hero__slide--1 { background-image: url("../img/hero.png"); }
+.hero__slide--2 { background-image: url("../img/hero 2.png"); }
+/* Hero 2 en PC: la foto un poco más grande y anclada a la izquierda,
+   así la moto queda más a la derecha (más ancho % = más a la derecha) */
+@media (min-width: 1025px) {
+  .hero__slide--2 {
+    background-size: 100% auto;
+    background-position: 0% 90%;
+  }
+}
+
+/* Degradados encima de las fotos para que se lea el texto */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,.7) 0%, rgba(0,0,0,.3) 25%, rgba(0,0,0,0) 45%),
+    linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.45) 32%, rgba(0,0,0,0) 55%);
 }
 .hero__inner {
   /* Altura proporcional a la imagen (16:9) para que la moto no se recorte */
@@ -556,14 +591,13 @@ body.no-scroll { overflow: hidden; }
   /* La barra de navegación se sustituye por el menú hamburguesa */
   .nav { display: none; }
 
-  .hero {
+  .hero::after {
     background-image:
       linear-gradient(180deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,.45) 30%, rgba(0,0,0,0) 55%),
-      linear-gradient(90deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,.55) 45%, rgba(0,0,0,.1) 75%),
-      url("../img/hero.png");
-    background-position: 75% 85%;
+      linear-gradient(90deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,.55) 45%, rgba(0,0,0,.1) 75%);
   }
-  .hero__inner { min-height: 480px; }
+  .hero__slide { background-position: 75% 85%; }
+  .hero__inner { min-height: 560px; }
   /* Texto del hero centrado en tablet y móvil */
   .hero__copy { max-width: none; width: 100%; padding-block: 48px; align-items: center; text-align: center; }
   .btn-cta { align-self: center; }
@@ -594,19 +628,27 @@ body.no-scroll { overflow: hidden; }
   .hero {
     /* Degradado: oscuro arriba (título), limpio en el centro (moto)
        y se funde a negro abajo, donde va el botón */
-    background-image:
-      linear-gradient(180deg, rgba(0,0,0,.95) 0%, rgba(0,0,0,.7) 20%, rgba(0,0,0,.1) 40%, rgba(0,0,0,0) 50%, rgba(0,0,0,.75) 76%, #000 92%),
-      url("../img/hero.png");
-    /* 1er valor = degradado (toda la sección) · 2º valor = foto */
-    background-size: 100% 100%, auto 190%;     /* zoom de la foto: más % = más recorte */
-    background-position: 0 0, 78% 38%;         /* foto: 2º número más bajo = se ve menos suelo */
-    background-origin: border-box, content-box;
     background-color: #000;
     position: relative;
     padding-bottom: 92px;           /* espacio para el botón, debajo del título */
   }
 
-  .hero__inner { min-height: 380px; align-items: stretch; }   /* altura del hero en móvil */
+  .hero::after {
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,.95) 0%, rgba(0,0,0,.7) 20%, rgba(0,0,0,.1) 40%, rgba(0,0,0,0) 50%, rgba(0,0,0,.75) 76%, #000 92%);
+  }
+  /* La foto se encuadra sin contar la franja de abajo (la del botón),
+     pero se sigue viendo por debajo y se funde a negro con el degradado */
+  .hero__slide {
+    padding-bottom: 92px;
+    background-origin: content-box;
+    background-size: auto 150%;     /* zoom de la foto: más % = más recorte */
+    background-position: 78% 38%;   /* 2º número más bajo = se ve menos suelo */
+  }
+  /* Hero 2 en móvil: la moto está más a la derecha en la foto */
+  .hero__slide--2 { background-size: auto 142%; background-position: 85% 35%; }
+
+  .hero__inner { min-height: 480px; align-items: stretch; }   /* altura del hero en móvil */
   /* Título arriba; subtítulo y botón pegados abajo de la sección */
   .hero__copy { max-width: none; padding: 32px 0 28px; }
   .hero__title {
