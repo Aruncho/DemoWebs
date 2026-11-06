@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+# Copia del .git original de ropa (repo FabyStore), no se sube
+_ropa-git-backup/
