@@ -1,8 +1,8 @@
 // ===== Datos de la tienda =====
 // WhatsApp de la empresa (código de país + número, sin + ni espacios)
 const WHATSAPP = '584123160820';
-const WA_SALUDO = 'Hola D-Pinguis, quiero información sobre sus productos.';
-const waLink = text => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
+// Sin texto: abre el chat vacío. Con texto: llega con el mensaje escrito (pedido del carrito o pregunta por un producto).
+const waLink = text => `https://wa.me/${WHATSAPP}${text ? `?text=${encodeURIComponent(text)}` : ''}`;
 
 const normalize = t => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 const escapeHtml = t => String(t).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -55,7 +55,7 @@ document.querySelectorAll('[data-grid]').forEach(grid => {
 
 // Enlaces de WhatsApp genéricos
 document.querySelectorAll('[data-wa]').forEach(a => {
-  a.href = waLink(WA_SALUDO);
+  a.href = waLink();
   a.target = '_blank';
   a.rel = 'noopener';
 });
