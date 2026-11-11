@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 380" width="340" height="380"><defs>
+<linearGradient id="c20_front" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e3e7ed"/></linearGradient>
+<linearGradient id="c20_top" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f4f6f9"/><stop offset="1" stop-color="#dfe3ea"/></linearGradient>
+<linearGradient id="c20_side" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d2d7df"/><stop offset="1" stop-color="#b9c0ca"/></linearGradient>
+<linearGradient id="c20_prong" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa1ab"/><stop offset="0.5" stop-color="#e3e6ea"/><stop offset="1" stop-color="#9aa1ab"/></linearGradient>
+<radialGradient id="c20_shadow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#0b1220" stop-opacity="0.22"/><stop offset="1" stop-color="#0b1220" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="170" cy="300" rx="110" ry="15" fill="url(#c20_shadow)"/>
+<!-- Patas -->
+<rect x="134" y="70" width="11" height="48" rx="3" fill="url(#c20_prong)"/>
+<rect x="183" y="64" width="11" height="48" rx="3" fill="url(#c20_prong)"/>
+<!-- Cubo isométrico -->
+<path d="M100 132l70-22 70 22-70 22z" fill="url(#c20_top)" stroke="#cdd3db" stroke-width="1.2"/>
+<path d="M100 132l70 22v134l-70-22z" fill="url(#c20_front)" stroke="#cdd3db" stroke-width="1.2"/>
+<path d="M240 132l-70 22v134l70-22z" fill="url(#c20_side)" stroke="#c2c8d1" stroke-width="1.2"/>
+<!-- Puerto USB-C -->
+<path d="M190 214l32-10a5 5 0 0 1 0 10l-32 10a5 5 0 0 1 0-10z" fill="#2a2f38"/>
+<text x="0" y="0" transform="matrix(1 .31 0 1 112 210)" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" font-style="italic" fill="#157da7">20W</text>
+<text x="0" y="0" transform="matrix(1 .31 0 1 114 232)" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#8a93a3">USB-C</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 380" width="340" height="380"><defs>
+<linearGradient id="eb_case" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#eef1f5"/><stop offset="1" stop-color="#d3d8e0"/></linearGradient>
+<linearGradient id="eb_lid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6eaf0"/></linearGradient>
+<linearGradient id="eb_bud" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d6dbe3"/></linearGradient>
+<radialGradient id="eb_shadow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#0b1220" stop-opacity="0.22"/><stop offset="1" stop-color="#0b1220" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="170" cy="318" rx="120" ry="16" fill="url(#eb_shadow)"/>
+<!-- Estuche -->
+<rect x="92" y="176" width="156" height="132" rx="54" fill="url(#eb_case)" stroke="#c9cfd8" stroke-width="1.5"/>
+<path d="M94 222h152" stroke="#c4cad3" stroke-width="2"/>
+<path d="M98 222c0-26 22-46 54-46h36c32 0 54 20 54 46" fill="url(#eb_lid)" opacity="0.7"/>
+<circle cx="170" cy="252" r="4" fill="#08f0fb"/>
+<circle cx="170" cy="252" r="9" fill="#08f0fb" opacity="0.18"/>
+<!-- Audífono izquierdo -->
+<g transform="rotate(-18 120 120)">
+  <rect x="110" y="118" width="20" height="78" rx="10" fill="url(#eb_bud)" stroke="#c9cfd8" stroke-width="1.5"/>
+  <circle cx="120" cy="108" r="30" fill="url(#eb_bud)" stroke="#c9cfd8" stroke-width="1.5"/>
+  <ellipse cx="111" cy="102" rx="13" ry="11" fill="#2a2f38"/>
+  <ellipse cx="108" cy="99" rx="4" ry="3" fill="#ffffff" opacity="0.35"/>
+  <rect x="116" y="184" width="8" height="8" rx="3" fill="#b8bfc8"/>
+</g>
+<!-- Audífono derecho -->
+<g transform="rotate(18 220 120)">
+  <rect x="210" y="118" width="20" height="78" rx="10" fill="url(#eb_bud)" stroke="#c9cfd8" stroke-width="1.5"/>
+  <circle cx="220" cy="108" r="30" fill="url(#eb_bud)" stroke="#c9cfd8" stroke-width="1.5"/>
+  <ellipse cx="229" cy="102" rx="13" ry="11" fill="#2a2f38"/>
+  <ellipse cx="226" cy="99" rx="4" ry="3" fill="#ffffff" opacity="0.35"/>
+  <rect x="216" y="184" width="8" height="8" rx="3" fill="#b8bfc8"/>
+</g>
+</svg>

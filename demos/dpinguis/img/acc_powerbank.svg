@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 380" width="340" height="380"><defs>
+<linearGradient id="pb_body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a4250"/><stop offset="0.55" stop-color="#232a35"/><stop offset="1" stop-color="#151a22"/></linearGradient>
+<linearGradient id="pb_edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5463"/><stop offset="0.5" stop-color="#7c8595"/><stop offset="1" stop-color="#4b5463"/></linearGradient>
+<linearGradient id="pb_shine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<radialGradient id="pb_shadow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#0b1220" stop-opacity="0.25"/><stop offset="1" stop-color="#0b1220" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="170" cy="326" rx="100" ry="14" fill="url(#pb_shadow)"/>
+<g transform="rotate(-8 170 190)">
+  <rect x="104" y="58" width="132" height="262" rx="28" fill="url(#pb_edge)"/>
+  <rect x="108" y="62" width="124" height="254" rx="25" fill="url(#pb_body)"/>
+  <rect x="108" y="62" width="124" height="254" rx="25" fill="url(#pb_shine)"/>
+  <!-- Puertos -->
+  <rect x="140" y="68" width="26" height="7" rx="3.5" fill="#0b0e13"/>
+  <rect x="176" y="68" width="22" height="7" rx="2" fill="#0b0e13"/>
+  <!-- Pantalla / indicador -->
+  <rect x="130" y="112" width="80" height="44" rx="12" fill="#0b0e13"/>
+  <text x="170" y="142" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#08f0fb">100%</text>
+  <!-- LEDs -->
+  <circle cx="146" cy="180" r="4.5" fill="#08f0fb"/>
+  <circle cx="162" cy="180" r="4.5" fill="#08f0fb"/>
+  <circle cx="178" cy="180" r="4.5" fill="#08f0fb"/>
+  <circle cx="194" cy="180" r="4.5" fill="#08f0fb" opacity="0.35"/>
+  <!-- Rayo -->
+  <path d="M176 214l-22 32h14l-6 26 24-34h-15z" fill="#08f0fb" opacity="0.9"/>
+  <text x="170" y="298" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#8d96a6">20000 mAh</text>
+</g>
+</svg>

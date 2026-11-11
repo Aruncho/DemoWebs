@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>D-Pinguis Technology — Inicio</title>
+<meta name="description" content="Teléfonos y accesorios Apple y Samsung originales en Caracas. Visítanos en City Market y Sabana Grande.">
+<meta name="theme-color" content="#08f0fb">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/favicon-180.png">
+<!-- Vista previa al compartir (WhatsApp, Facebook, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="D-Pinguis Technology">
+<meta property="og:title" content="D-Pinguis Technology">
+<meta property="og:description" content="Los mejores teléfonos y accesorios Apple y Samsung, originales y al mejor precio. Escríbenos o visítanos en Caracas.">
+<meta property="og:url" content="https://trolluncho.pythonanywhere.com/dpinguis/">
+<meta property="og:image" content="https://trolluncho.pythonanywhere.com/dpinguis/img/icono-compartir.jpg">
+<meta property="og:image:secure_url" content="https://trolluncho.pythonanywhere.com/dpinguis/img/icono-compartir.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="D-Pinguis Technology">
+<meta property="og:locale" content="es_VE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://trolluncho.pythonanywhere.com/dpinguis/img/icono-compartir.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,700;0,800;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#inicio" class="brand">
+      <img src="img/logo.png" alt="Logo D-Pinguis Technology" class="brand__logo">
+      <span class="brand__text"><span class="brand__name">D·PINGUIS</span><span class="brand__sub">TECHNOLOGY</span></span>
+    </a>
+    <nav class="nav" id="mainNav" aria-label="Principal">
+      <a href="#inicio" class="nav__link is-active" data-section="inicio">Inicio</a>
+      <a href="catalogo.html" class="nav__link" data-section="tienda">Tienda</a>
+      <a href="#nosotros" class="nav__link" data-section="nosotros">Nosotros</a>
+      <a href="#contacto" class="nav__link" data-section="contacto">Contacto</a>
+    </nav>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+    <div class="header__actions">
+      <form class="search" id="search" role="search" action="#catalogo">
+        <input class="search__input" id="searchInput" type="search" placeholder="Buscar teléfonos…" aria-label="Buscar teléfonos" autocomplete="off" tabindex="-1">
+        <button class="icon-btn search__btn" id="searchBtn" type="button" aria-label="Abrir búsqueda" aria-expanded="false" aria-controls="searchInput">
+          <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        </button>
+      </form>
+      <button class="icon-btn cart-btn" id="cartBtn" type="button" aria-label="Abrir carrito de compras">
+        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h3l2.4 11.2a1.5 1.5 0 0 0 1.5 1.2h8.8a1.5 1.5 0 0 0 1.5-1.1L21 7H6"/><circle cx="9.5" cy="20" r="1.4"/><circle cx="17.5" cy="20" r="1.4"/></svg>
+        <span class="cart-badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="hero" data-spy="inicio">
+    <div class="hero__stripe hero__stripe--big" aria-hidden="true"></div>
+    <div class="hero__stripe hero__stripe--thin" aria-hidden="true"></div>
+    <div class="hero__stripe hero__stripe--line" aria-hidden="true"></div>
+
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <div class="slides">
+        <div class="slide is-active">
+          <p class="eyebrow">TECNOLOGÍA A OTRO NIVEL</p>
+          <h1 class="hero__title">Los mejores<br><span class="grad">Teléfonos</span></h1>
+          <p class="hero__lead">Calidad, rendimiento y estilo en un solo lugar.</p>
+        </div>
+        <div class="slide">
+          <p class="eyebrow">RECIÉN LLEGADOS</p>
+          <h1 class="hero__title">Estrena tu<br><span class="grad">Smartphone</span></h1>
+          <p class="hero__lead">Los modelos más nuevos de Apple y Samsung, originales y listos para entregar.</p>
+        </div>
+        <div class="slide">
+          <p class="eyebrow">EL MEJOR PRECIO DE LA CIUDAD</p>
+          <h1 class="hero__title">Encuentra tu<br><span class="grad">Teléfono ideal</span></h1>
+          <p class="hero__lead">Compara modelos y escoge el que va contigo.</p>
+        </div>
+        </div>
+
+        <div class="dots" role="group" aria-label="Diapositivas">
+          <button class="dot is-active" aria-label="Ver diapositiva 1"><span></span></button>
+          <button class="dot" aria-label="Ver diapositiva 2"><span></span></button>
+          <button class="dot" aria-label="Ver diapositiva 3"><span></span></button>
+        </div>
+      </div>
+      <div class="hero__media">
+        <img src="img/hero_phones.svg" alt="Teléfonos de alta gama">
+      </div>
+    </div>
+  </section>
+
+  <section id="catalogo" class="container catalog" data-spy="tienda" data-search-target>
+    <div class="catalog__head">
+      <div>
+        <p class="eyebrow">NUESTRO CATÁLOGO</p>
+        <h2 class="section-title">Teléfonos <span>Destacados</span></h2>
+      </div>
+      <a href="catalogo.html?cat=telefonos" class="btn-outline">Ver Todo
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="grid" data-grid="telefonos:4"></div>
+    <p class="no-results" id="noResults" hidden>No encontramos teléfonos que coincidan con tu búsqueda.</p>
+  </section>
+
+  <section id="accesorios" class="container catalog catalog--acc" data-spy="tienda">
+    <div class="catalog__head">
+      <div>
+        <p class="eyebrow">COMPLEMENTA TU EQUIPO</p>
+        <h2 class="section-title">Accesorios <span>Destacados</span></h2>
+      </div>
+      <a href="catalogo.html?cat=accesorios" class="btn-outline">Ver Todo
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="grid" data-grid="accesorios:4"></div>
+  </section>
+
+  <section id="nosotros" class="about" data-spy="nosotros">
+    <div class="about__stripe" aria-hidden="true"></div>
+    <div class="container about__inner">
+      <div class="about__media">
+        <div class="about__visual">
+          <div class="about__logo"><img src="img/logo.png" alt="Logo D-Pinguis Technology"></div>
+        </div>
+        <div class="float-badge float-badge--top">
+          <span class="float-badge__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+          <div><strong>Producto original</strong></div>
+        </div>
+        <div class="float-badge float-badge--bottom">
+          <span class="float-badge__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12V4.5A1.5 1.5 0 0 1 4.5 3H12l9 9-9 9z"/><circle cx="8" cy="8" r="1.6"/></svg></span>
+          <div><strong>Mejores precios</strong><span>Del mercado</span></div>
+        </div>
+      </div>
+
+      <div class="about__text">
+        <p class="eyebrow">QUIÉNES SOMOS</p>
+        <h2 class="section-title">Tu tienda de <span>Confianza</span></h2>
+        <p class="about__lead">En D-Pinguis Technology llevamos años ayudando a nuestros clientes a encontrar el teléfono perfecto. Trabajamos solo con equipos originales y te acompañamos antes, durante y después de tu compra.</p>
+        <ul class="checklist">
+          <li>Equipos originales Apple y Samsung</li>
+          <li>Asesoría personalizada para elegir tu modelo</li>
+          <li>Los mejores precios del mercado</li>
+          <li>Soporte técnico propio</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="container contact" data-spy="contacto">
+    <div class="contact__head">
+      <p class="eyebrow">NUESTRAS TIENDAS</p>
+      <h2 class="section-title">Visítanos en <span>Caracas</span></h2>
+      <p class="contact__sub">Ven a ver y probar tu próximo teléfono en cualquiera de nuestras dos sedes.</p>
+    </div>
+
+    <div class="stores">
+      <article class="store">
+        <div class="store__map">
+          <iframe src="https://maps.google.com/maps?q=Centro+Comercial+City+Market%2C+Sabana+Grande%2C+Caracas&amp;z=16&amp;output=embed" title="Mapa de la tienda City Market" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <span class="store__tag">SEDE 1</span>
+        </div>
+        <div class="store__body">
+          <h3 class="store__name">City Market</h3>
+          <p class="store__row"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>C.C. City Market, Bulevar de Sabana Grande, Caracas</span></p>
+          <p class="store__row"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lun – Sáb · 9:00 a 19:00</span></p>
+          <div class="store__actions">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Centro+Comercial+City+Market%2C+Sabana+Grande%2C+Caracas" class="btn-outline" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Cómo llegar</a>
+          </div>
+        </div>
+      </article>
+      <article class="store">
+        <div class="store__map">
+          <iframe src="https://maps.google.com/maps?q=Bulevar+de+Sabana+Grande%2C+Caracas&amp;z=16&amp;output=embed" title="Mapa de la tienda Sabana Grande" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <span class="store__tag">SEDE 2</span>
+        </div>
+        <div class="store__body">
+          <h3 class="store__name">Sabana Grande</h3>
+          <p class="store__row"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Bulevar de Sabana Grande, Caracas</span></p>
+          <p class="store__row"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lun – Sáb · 9:00 a 19:00</span></p>
+          <div class="store__actions">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Bulevar+de+Sabana+Grande%2C+Caracas" class="btn-outline" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Cómo llegar</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="contact-cta">
+      <div class="contact-cta__text">
+        <h3>¿Tienes dudas o quieres apartar tu equipo?</h3>
+        <p>Escríbenos y te respondemos al momento.</p>
+      </div>
+      <a href="#" class="btn-wa" data-wa target="_blank" rel="noopener"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>Escribir por WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__stripe" aria-hidden="true"></div>
+  <div class="container footer__top">
+    <div class="footer__brand">
+      <a href="#inicio" class="brand">
+        <img src="img/logo.png" alt="Logo D-Pinguis Technology" class="brand__logo">
+        <span class="brand__text"><span class="brand__name">D·PINGUIS</span><span class="brand__sub">TECHNOLOGY</span></span>
+      </a>
+      <p>Los mejores teléfonos, originales y con garantía. Calidad, rendimiento y estilo en un solo lugar.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/dpinguistechnology/" class="social" aria-label="Instagram de D-Pinguis" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/dpinguistechnology/" class="social" aria-label="Facebook de D-Pinguis" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.5-1.3 1.3-1.3H17V2.3h-2.6C11.6 2.3 10.5 4 10.5 6.5v2H8v3.3h2.5v9.9H14v-9.9h2.6l.4-3.3z"/></svg></a>
+        <a href="#" class="social" aria-label="WhatsApp" data-wa target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+
+    <nav class="footer__col" aria-label="Tienda">
+      <h3>Tienda</h3>
+      <a href="catalogo.html?cat=telefonos">Teléfonos</a>
+      <a href="catalogo.html?cat=accesorios">Accesorios</a>
+      <a href="catalogo.html?marca=apple">Apple</a>
+      <a href="catalogo.html?marca=samsung">Samsung</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Ayuda">
+      <h3>Ayuda</h3>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Garantía</a>
+      <a href="#contacto">Envíos</a>
+      <a href="#contacto">Preguntas frecuentes</a>
+    </nav>
+
+    <div class="footer__col">
+      <h3>Contacto</h3>
+      <span>C.C. City Market, Sabana Grande</span>
+      <span>Bulevar de Sabana Grande, Caracas</span>
+      <a href="#" data-wa target="_blank" rel="noopener">+58 412-3160820</a>
+      <a href="mailto:inversionesasg2018@gmail.com">inversionesasg2018@gmail.com</a>
+      <span>Lun – Sáb · 9:00 a 19:00</span>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>© 2026 D-Pinguis Technology. Todos los derechos reservados.</p>
+    <div class="footer__legal"><a href="#">Términos</a><a href="#">Privacidad</a></div>
+  </div>
+</footer>
+
+<a href="#" class="wa-float" data-wa target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <span class="wa-float__tip">¿Te ayudamos?</span>
+  <svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

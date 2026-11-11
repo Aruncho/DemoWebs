@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 380" width="340" height="380"><defs>
+<linearGradient id="bd_case" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b6170"/><stop offset="0.55" stop-color="#3a404c"/><stop offset="1" stop-color="#232832"/></linearGradient>
+<linearGradient id="bd_lid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8d0dc" stop-opacity="0.55"/><stop offset="1" stop-color="#8e98a8" stop-opacity="0.35"/></linearGradient>
+<linearGradient id="bd_bud" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9edf2"/><stop offset="0.5" stop-color="#b7bfca"/><stop offset="1" stop-color="#7d8592"/></linearGradient>
+<linearGradient id="bd_blade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#20252e"/><stop offset="0.5" stop-color="#4a5260"/><stop offset="1" stop-color="#20252e"/></linearGradient>
+<radialGradient id="bd_shadow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#0b1220" stop-opacity="0.25"/><stop offset="1" stop-color="#0b1220" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="170" cy="320" rx="122" ry="16" fill="url(#bd_shadow)"/>
+<!-- Estuche oscuro con tapa translúcida -->
+<rect x="86" y="190" width="168" height="118" rx="40" fill="url(#bd_case)"/>
+<path d="M90 226h160" stroke="#1b1f27" stroke-width="2"/>
+<path d="M92 226c0-22 18-38 44-38h68c26 0 44 16 44 38z" fill="url(#bd_lid)"/>
+<rect x="156" y="270" width="28" height="5" rx="2.5" fill="#08f0fb"/>
+<!-- Audífono izquierdo (tallo tipo cuchilla) -->
+<g transform="rotate(-14 125 120)">
+  <path d="M112 128h26l-4 76a9 9 0 0 1-18 0z" fill="url(#bd_blade)"/>
+  <path d="M117 140h16" stroke="#08f0fb" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="125" cy="108" rx="30" ry="27" fill="url(#bd_bud)"/>
+  <ellipse cx="114" cy="104" rx="12" ry="10" fill="#2a2f38"/>
+</g>
+<!-- Audífono derecho -->
+<g transform="rotate(14 215 120)">
+  <path d="M202 128h26l-4 76a9 9 0 0 1-18 0z" fill="url(#bd_blade)"/>
+  <path d="M207 140h16" stroke="#08f0fb" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="215" cy="108" rx="30" ry="27" fill="url(#bd_bud)"/>
+  <ellipse cx="226" cy="104" rx="12" ry="10" fill="#2a2f38"/>
+</g>
+</svg>

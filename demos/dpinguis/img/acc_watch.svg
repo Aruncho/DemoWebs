@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 380" width="340" height="380"><defs>
+<linearGradient id="sw_band" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1c2330"/><stop offset="0.5" stop-color="#2e3747"/><stop offset="1" stop-color="#1c2330"/></linearGradient>
+<linearGradient id="sw_case" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8d939c"/><stop offset="0.5" stop-color="#d9dde3"/><stop offset="1" stop-color="#6f757e"/></linearGradient>
+<linearGradient id="sw_screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101827"/><stop offset="1" stop-color="#05080e"/></linearGradient>
+<linearGradient id="sw_ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#08f0fb"/><stop offset="1" stop-color="#157da7"/></linearGradient>
+<radialGradient id="sw_shadow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#0b1220" stop-opacity="0.22"/><stop offset="1" stop-color="#0b1220" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="170" cy="340" rx="90" ry="12" fill="url(#sw_shadow)"/>
+<!-- Correas -->
+<path d="M128 40h84l-6 104h-72z" fill="url(#sw_band)"/>
+<path d="M134 236h72l6 98h-84z" fill="url(#sw_band)"/>
+<circle cx="170" cy="282" r="4" fill="#0b0e13"/><circle cx="170" cy="300" r="4" fill="#0b0e13"/><circle cx="170" cy="318" r="4" fill="#0b0e13"/>
+<!-- Caja -->
+<rect x="104" y="112" width="132" height="156" rx="36" fill="url(#sw_case)"/>
+<rect x="242" y="156" width="10" height="30" rx="4" fill="url(#sw_case)"/>
+<rect x="240" y="198" width="6" height="22" rx="3" fill="#8d939c"/>
+<rect x="112" y="120" width="116" height="140" rx="30" fill="url(#sw_screen)"/>
+<!-- Esfera -->
+<circle cx="170" cy="190" r="44" fill="none" stroke="#1d2635" stroke-width="7"/>
+<path d="M170 146a44 44 0 0 1 41 59" fill="none" stroke="url(#sw_ring)" stroke-width="7" stroke-linecap="round"/>
+<text x="170" y="196" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#ffffff">10:09</text>
+<text x="170" y="214" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#08f0fb">♥ 72 BPM</text>
+<path d="M120 128c20-6 40-8 60-8" stroke="#ffffff" stroke-opacity="0.12" stroke-width="6" stroke-linecap="round"/>
+</svg>
