@@ -402,12 +402,6 @@ body.cart-open{overflow:hidden}
 }
 
 @media (max-width:720px){
-  /* Búsqueda: el campo se abre por encima del logo sin empujar nada */
-  .search{width:48px;height:48px}
-  .search__input{position:absolute;right:0;top:0;z-index:1}
-  .search__btn{z-index:2}
-  .search.is-open .search__input{width:calc(100vw - 144px)}
-
   /* Franja del hero: ocupa toda la sección para que siempre llegue al borde inferior */
   .hero__stripe--big{inset:0;width:auto;height:auto;transform:none;clip-path:polygon(100% 9%,100% 100%,0 100%,0 96%)}
   .hero__stripe--thin,.hero__stripe--line{display:none}
@@ -425,9 +419,7 @@ body.cart-open{overflow:hidden}
   .footer__top{grid-template-columns:1fr 1fr;gap:32px 20px;padding-top:48px}
   .footer__brand{grid-column:1/-1}
   .footer__col:last-child{grid-column:1/-1}
-  .footer__bottom{flex-direction:column;align-items:flex-start;padding-bottom:96px}
-  .wa-float{right:16px;bottom:16px;width:56px;height:56px}
-  .wa-float__tip{display:none}
+  .footer__bottom{flex-direction:column;align-items:flex-start}
 
   /* Catálogo: 2 cartas por fila */
   .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -486,5 +478,16 @@ body.cart-open{overflow:hidden}
   .cart__head{padding:18px 18px 14px}
   .cart__body{padding:4px 18px}
   .cart__foot{padding:16px 18px 20px}
-  .toast{bottom:88px;gap:10px;padding:10px 10px 10px 14px;font-size:13px}
+  .toast{bottom:20px;gap:10px;padding:10px 10px 10px 14px;font-size:13px}
+}
+
+/* Teléfono y tablet: sin botón flotante de WhatsApp y búsqueda desplegable bajo la cabecera */
+@media (max-width:900px){
+  .wa-float{display:none}
+  .search{position:static}
+  .search__btn{position:relative}
+  .search__input{position:absolute;left:16px;right:16px;top:calc(100% + 10px);z-index:20;width:auto;height:52px;padding:0 18px 0 46px;border:2px solid var(--cyan);border-radius:16px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23157da7' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E") 16px center/20px no-repeat;font-size:16px;box-shadow:0 14px 32px rgba(11,18,32,.14);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s ease,transform .3s cubic-bezier(.22,1,.36,1),visibility 0s linear .3s}
+  .search.is-open .search__input{width:auto;padding:0 18px 0 46px;opacity:1;visibility:visible;transform:none;transition:opacity .25s ease,transform .3s cubic-bezier(.22,1,.36,1),visibility 0s}
+  .search.is-open .search__input:focus{box-shadow:0 14px 32px rgba(11,18,32,.14),0 0 0 4px rgba(8,240,251,.2)}
+  .search.is-open .search__btn{background:#dffdfe}
 }
