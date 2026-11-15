@@ -6,3 +6,10 @@ _ropa-git-backup/
 # Archivos de trabajo sueltos en la raíz (no son demos)
 Design.html
 phonestores-preview.html
+
+# Old Caribe: fotos originales pesadas (la web usa las versiones .webp) y capturas de trabajo
+demos/oldcaribe/capturas/
+demos/oldcaribe/img/Shoes/*.jpg
+demos/oldcaribe/img/Shoes/*.png
+demos/oldcaribe/img/Shoes/BOLD_*.webp
+demos/oldcaribe/img/logo-full.png
