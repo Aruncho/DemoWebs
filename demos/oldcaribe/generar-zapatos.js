@@ -8,7 +8,7 @@
 //  Cómo correrlo:   abre una terminal en esta carpeta y escribe   node generar-zapatos.js
 //
 //  Foto para compartir: si existe img/og/<id>.jpg (1200×1200) se usa esa;
-//  si no, la foto del zapato; y si no tiene foto, el logo de Old Caribe (img/og-logo.jpg, 1200×1200).
+//  si no, la foto del zapato; y si no tiene foto, el logo de Old Caribe (img/og-logo-hd.jpg, 1200×1200).
 // ============================================================
 const fs = require("fs");
 const path = require("path");
@@ -38,7 +38,7 @@ for (const p of PRODUCTOS) {
   const desc = `${CONFIG.moneda}${p.precio} · Tallas ${p.tallas[0]} a ${p.tallas[1]}. ` +
     (DESCRIPCIONES[p.id] || `${p.nombre} de la línea ${p.linea}. Pide por WhatsApp.`);
 
-  let imagen = "img/og-logo.jpg", ancho = 1200, alto = 1200;
+  let imagen = "img/og-logo-hd.jpg", ancho = 1200, alto = 1200;
   if (fs.existsSync(path.join(raiz, `img/og/${p.id}.jpg`))) imagen = `img/og/${p.id}.jpg`;
   else if (p.imagen) { imagen = p.imagen.split("?")[0]; ancho = alto = null; }
 
