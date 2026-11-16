@@ -7,8 +7,8 @@
 //  Cuándo correrlo: cada vez que agregues, quites o cambies un zapato en js/productos.js
 //  Cómo correrlo:   abre una terminal en esta carpeta y escribe   node generar-zapatos.js
 //
-//  Foto para compartir (ancha, WhatsApp la muestra grande): si existe img/og-grande/<id>.jpg (1200×630)
-//  se usa esa; si no, la foto del zapato; y si no tiene foto, el logo (img/og-logo-grande.jpg).
+//  Foto para compartir (1200×1200, JPEG liviano, como en D-Pinguis): si existe img/compartir/<id>.jpg
+//  se usa esa; si no, la foto del zapato; y si no tiene foto, el logo (img/compartir/logo.jpg).
 // ============================================================
 const fs = require("fs");
 const path = require("path");
@@ -38,8 +38,8 @@ for (const p of PRODUCTOS) {
   const desc = `${CONFIG.moneda}${p.precio} · Tallas ${p.tallas[0]} a ${p.tallas[1]}. ` +
     (DESCRIPCIONES[p.id] || `${p.nombre} de la línea ${p.linea}. Pide por WhatsApp.`);
 
-  let imagen = "img/og-logo-grande.jpg", ancho = 1200, alto = 630;
-  if (fs.existsSync(path.join(raiz, `img/og-grande/${p.id}.jpg`))) imagen = `img/og-grande/${p.id}.jpg`;
+  let imagen = "img/compartir/logo.jpg", ancho = 1200, alto = 1200;
+  if (fs.existsSync(path.join(raiz, `img/compartir/${p.id}.jpg`))) imagen = `img/compartir/${p.id}.jpg`;
   else if (p.imagen) { imagen = p.imagen.split("?")[0]; ancho = alto = null; }
 
   const meta = [
@@ -53,10 +53,13 @@ for (const p of PRODUCTOS) {
     `<meta property="og:description" content="${escapar(desc)}">`,
     `<meta property="og:url" content="${sitio}/zapatos/${slug}.html">`,
     `<meta property="og:image" content="${sitio}/${imagen}">`,
+    `<meta property="og:image:secure_url" content="${sitio}/${imagen}">`,
+    `<meta property="og:image:type" content="${imagen.endsWith(".webp") ? "image/webp" : "image/jpeg"}">`,
     ancho ? `<meta property="og:image:width" content="${ancho}">\n  <meta property="og:image:height" content="${alto}">` : "",
     `<meta property="og:image:alt" content="${escapar(p.nombre)}">`,
     `<meta property="og:locale" content="es_VE">`,
-    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:card" content="summary">`,
+    `<meta name="twitter:image" content="${sitio}/${imagen}">`,
     `<meta name="theme-color" content="#0e0e0e">`,
   ].filter(Boolean).join("\n  ");
 
