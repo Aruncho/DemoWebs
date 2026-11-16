@@ -285,19 +285,22 @@ a { color: inherit; }
   .ventaja p { font-size: 13px; }
 
   /* Footer compacto: marca + redes en una fila, Tienda/Líneas lado a lado, todo más apretado */
+  /* ---- Footer en teléfono: dos columnas → Redes | Tienda, y debajo Líneas | Contacto ---- */
   .footer { margin-top: 36px; }
-  .footer__grid { grid-template-columns: 1fr 1fr; gap: 22px 16px; padding-block: 26px 20px; }
-  .footer__marca { grid-column: 1 / -1; gap: 8px; }
+  .footer__grid { grid-template-columns: 1fr 1fr; gap: 26px 16px; padding-block: 26px 22px; }
+  .footer__marca { gap: 10px; }
   .footer__redes { gap: 6px; }
   .footer__redes a { width: 36px; height: 36px; border-radius: 10px; }
   .footer__redes svg { width: 16px; height: 16px; }
   .footer__col { gap: 8px; font-size: 13px; }
-  .footer__col h3, .footer__marca h3 { font-size: 16px; margin-bottom: 2px; }
-  .footer__contacto { grid-column: 1 / -1; padding: 14px; gap: 10px; border-radius: 14px; background: var(--negro-2); border: 1px solid #262626; }
-  .footer__pagos { flex-wrap: nowrap; overflow-x: auto; gap: 6px; padding-block: 14px; scrollbar-width: none; }
-  .footer__pagos::-webkit-scrollbar { display: none; }
-  .footer__pagos b { flex: none; font-size: 11px; margin-right: 4px; }
-  .footer__pagos span { flex: none; font-size: 12px; padding: 5px 11px; }
+  .footer__col h3, .footer__marca h3 { font-size: 16px; margin: 0 0 2px; }
+  .footer__contacto { gap: 10px; }
+  .footer__contacto span, .footer__contacto a { align-items: flex-start; gap: 8px; line-height: 1.35; }
+  .footer__contacto svg { margin-top: 1px; }
+  /* Aceptamos: solo, abajo, con las etiquetas que bajan de línea si no caben */
+  .footer__pagos { gap: 6px; padding-block: 14px 16px; }
+  .footer__pagos b { flex-basis: 100%; font-size: 11px; margin: 0 0 2px; }
+  .footer__pagos span { font-size: 12px; padding: 5px 11px; }
   .footer__base .footer__base-fila { flex-direction: row; text-align: left; gap: 10px; padding-block: 12px; padding-right: 84px; font-size: 12px; }   /* a la derecha queda el botón flotante */
   .footer__arriba { flex: none; }
 
