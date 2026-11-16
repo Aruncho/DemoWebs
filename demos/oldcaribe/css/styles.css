@@ -32,6 +32,7 @@ a { color: inherit; }
 .marca { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
 .marca img { width: 54px; height: 54px; }
 .marca span { font-family: var(--f-script); font-size: 34px; line-height: 1; }
+.marca img.marca__texto { width: auto; height: 46px; }
 .nav { display: flex; gap: 28px; margin-left: 24px; font-size: 15px; font-weight: 500; }
 .nav a { position: relative; color: #d6d6d6; text-decoration: none; padding-bottom: 6px; transition: color .2s; }
 /* Línea turquesa debajo: crece de izquierda a derecha al pasar el mouse; fija en la página activa */
@@ -59,31 +60,18 @@ a { color: inherit; }
 .franja span:nth-child(5) { background: #c9a98a; }
 
 /* ---------- Hero ---------- */
-.hero { background: var(--negro); color: #fff; overflow: hidden; }
+.hero { position: relative; color: #fff; overflow: hidden; background: var(--negro) url("../img/hero-fondo.webp") center / cover no-repeat; }
+/* Capa oscura sobre la foto: más fuerte a la izquierda, donde va el texto */
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(14,14,14,.92) 0%, rgba(14,14,14,.78) 38%, rgba(14,14,14,.35) 75%, rgba(14,14,14,.2) 100%); }
+.hero__fila { position: relative; min-height: 460px; }
 .hero__fila { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding-block: 48px 52px; }
 .hero__texto { flex: 1 1 440px; display: flex; flex-direction: column; gap: 18px; position: relative; z-index: 2; }
 .hero__titulo { margin: 0; font-family: var(--f-titulo); font-weight: 400; font-size: 88px; line-height: .95; }
 .hero__titulo span { font-family: var(--f-brocha); color: var(--turquesa); font-size: 1.08em; }
 .hero__botones { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
-.hero__arte { flex: 1 1 440px; position: relative; height: 360px; }
-.hero__logo-fondo { position: absolute; right: 28px; top: -10px; width: 380px; height: 380px; opacity: .22; }
-.hero__garras { position: absolute; left: 0; top: -10px; width: 540px; height: 400px; }
-/* PRUEBA: sombra turquesa debajo de la Retro 1 (reemplaza a las garras) */
-.hero__sombra { position: absolute; left: -15px; top: 306px; width: 460px; height: 50px; border-radius: 50%; transform: rotate(-7deg); background: radial-gradient(ellipse at center, rgba(46,196,198,1) 0%, rgba(46,196,198,.8) 45%, rgba(46,196,198,0) 70%); filter: blur(3px); }
-.hero__zapato { position: absolute; left: -45px; top: 26px; width: 500px; transform: rotate(-9deg); filter: drop-shadow(0 8px 10px rgba(0,0,0,.35)); } /* PRUEBA: antes 0 26px 22px rgba(0,0,0,.55) */
 /* Etiqueta tipo hang-tag de zapato: vidrio esmerilado, agujero arriba y precio grande */
-.hero__etiqueta { position: absolute; left: 400px; bottom: 6px; z-index: 2; display: flex; flex-direction: column; gap: 2px; min-width: 190px; padding: 14px 20px 14px 18px; border-radius: 3px 16px 16px 16px; background: rgba(255,255,255,.78); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.6); color: var(--negro); text-decoration: none; box-shadow: 0 12px 28px rgba(0,0,0,.35); transform: rotate(4deg); transition: transform .2s; }
-.hero__etiqueta:hover { transform: rotate(0deg) translateY(-2px); }
-.hero__etiqueta::before { content: ""; position: absolute; top: 10px; right: 12px; width: 9px; height: 9px; border-radius: 50%; background: var(--negro); box-shadow: inset 0 1px 2px rgba(0,0,0,.6); }
 /* Flechita que sale de la esquina de arriba a la izquierda, apuntando al zapato */
-.hero__etiqueta::after { content: ""; position: absolute; left: -9px; top: -9px; width: 22px; height: 22px; background: rgba(255,255,255,.78); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); clip-path: polygon(0 0, 100% 41%, 41% 100%); }
 /* 3 rayas diagonales turquesa en la esquina de abajo a la derecha */
-.hero__etiqueta-rayas { position: absolute; right: 0; bottom: 0; width: 60px; height: 60px; border-bottom-right-radius: inherit; pointer-events: none; background: linear-gradient(135deg, transparent 0 46%, var(--turquesa) 46% 53%, transparent 53% 61%, var(--turquesa) 61% 68%, transparent 68% 76%, var(--turquesa) 76% 83%, transparent 83%); }
-.hero__etiqueta > :not(.hero__etiqueta-rayas) { position: relative; z-index: 1; }
-.hero__etiqueta small { display: flex; align-items: center; gap: 8px; padding-right: 18px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--rojo); }
-.hero__etiqueta small::after { content: ""; flex: 1; height: 1.5px; background: var(--rojo); }
-.hero__etiqueta strong { font-size: 16px; font-weight: 600; }
-.hero__etiqueta b { font-family: var(--f-titulo); font-weight: 400; font-size: 30px; line-height: 1.05; }
 
 /* ---------- Botones ---------- */
 .btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 15px; padding: 0 26px; height: 50px; border-radius: 999px; cursor: pointer; border: none; font-family: inherit; }
@@ -101,7 +89,7 @@ a { color: inherit; }
 .titulo { margin: 0; font-family: var(--f-titulo); font-weight: 400; font-size: 34px; }
 
 /* Categorías */
-.categorias { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.categorias { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
 .categoria { position: relative; display: flex; flex-direction: column; justify-content: end; gap: 4px; min-height: 150px; padding: 18px 20px; border-radius: 16px; background: var(--negro); color: #fff; text-decoration: none; overflow: hidden; transition: box-shadow .2s; }
 .categoria:hover { box-shadow: 0 14px 30px rgba(0,0,0,.22); }
 .categoria::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 6px; background: var(--color, var(--turquesa)); }
@@ -154,13 +142,12 @@ a { color: inherit; }
 /* ---------- Footer ---------- */
 .footer { background: var(--negro); color: #fff; margin-top: 56px; }
 .footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.4fr; gap: 40px; padding-block: 48px 36px; }
-.footer__marca { display: flex; flex-direction: column; gap: 16px; }
-.footer__marca p { margin: 0; max-width: 320px; font-size: 14px; line-height: 1.6; color: #a8a8a8; }
+.footer__marca { display: flex; flex-direction: column; gap: 12px; }
 .footer__redes { display: flex; gap: 10px; }
 .footer__redes a { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; background: var(--negro-2); border: 1px solid #2e2e2e; transition: background .15s, color .15s, transform .15s; }
 .footer__redes a:hover { background: var(--turquesa); border-color: var(--turquesa); color: var(--negro); transform: translateY(-2px); }
 .footer__col { display: flex; flex-direction: column; gap: 12px; font-size: 14px; }
-.footer__col h3 { margin: 0 0 4px; font-family: var(--f-titulo); font-weight: 400; font-size: 20px; letter-spacing: .04em; color: #fff; }
+.footer__col h3, .footer__marca h3 { margin: 0 0 4px; font-family: var(--f-titulo); font-weight: 400; font-size: 20px; letter-spacing: .04em; color: #fff; }
 .footer__col a { color: #b8b8b8; text-decoration: none; width: fit-content; transition: color .15s; }
 .footer__col a:hover { color: var(--turquesa); }
 .footer__contacto span, .footer__contacto a { display: flex; align-items: center; gap: 10px; color: #b8b8b8; }
@@ -223,6 +210,7 @@ a { color: inherit; }
   .marca { gap: 10px; }
   .marca img { width: 44px; height: 44px; }
   .marca span { font-size: 28px; white-space: nowrap; }
+  .marca img.marca__texto { width: auto; height: 36px; }
   .header__acciones { gap: 4px; }
   .btn-icono.btn-menu, .btn-icono.btn-buscar { display: flex; }
   .header .btn-icono { width: 42px; height: 42px; background: transparent; border: none; }
@@ -242,12 +230,12 @@ a { color: inherit; }
   /* Menú lateral: ahora entra desde la derecha, junto a la hamburguesa */
   .menu-fondo { display: block; position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,.55); }
   .menu-fondo[hidden] { display: none; }
-  .menu-lateral { display: flex; position: fixed; top: 0; right: 0; bottom: 0; z-index: 61; width: min(320px, 85vw); background: var(--negro); color: #fff; padding: 18px 22px; flex-direction: column; gap: 26px; transform: translateX(100%); visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s; border-left: 6px solid var(--turquesa); }
+  .menu-lateral { display: flex; position: fixed; top: 0; right: 0; bottom: 0; z-index: 61; width: min(320px, 85vw); background: var(--negro); color: #fff; padding: 18px 22px; flex-direction: column; gap: 26px; transform: translateX(100%); visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s; border-left: 3px solid var(--turquesa); }
   .menu-lateral.abierto { transform: none; visibility: visible; transition: transform .25s ease; }
   .menu-lateral__cabecera { display: flex; align-items: center; justify-content: space-between; }
   .menu-lateral__titulo { font-family: var(--f-brocha); font-size: 34px; line-height: 1; color: var(--turquesa); }
   .menu-lateral__nav { display: flex; flex-direction: column; }
-  .menu-lateral__nav a { font-family: var(--f-titulo); font-size: 30px; color: #d6d6d6; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #262626; transition: color .15s, padding-left .15s; }
+  .menu-lateral__nav a { font-family: var(--f-titulo); font-size: 24px; color: #d6d6d6; text-decoration: none; padding: 11px 0; border-bottom: 1px solid #262626; transition: color .15s, padding-left .15s; }
   .menu-lateral__nav a:hover { color: #fff; padding-left: 6px; }
   .menu-lateral__nav a.activo { color: var(--turquesa); }
   body.menu-abierto { overflow: hidden; }
@@ -258,20 +246,13 @@ a { color: inherit; }
 @media (max-width: 700px) {
 
   /* Hero: título, botones a lo ancho y el zapato debajo (más chico) */
-  .hero__fila { padding-block: 28px 24px; gap: 8px; }
+  .hero { background-image: url("../img/hero-fondo-movil.webp"); }
+  .hero::before { background: linear-gradient(180deg, rgba(14,14,14,.55) 0%, rgba(14,14,14,.8) 100%); }
+  .hero__fila { padding-block: 70px 74px; gap: 8px; min-height: 0; }
   .hero__texto { flex-basis: 100%; gap: 20px; }
   .hero__titulo { font-size: 56px; text-align: center; }
   .hero__botones { justify-content: center; }
   .hero__botones .btn { height: 48px; padding: 0 30px; }
-  .hero__arte { flex-basis: 100%; height: 250px; }
-  .hero__logo-fondo { width: 230px; height: 230px; top: 4px; right: 0; }
-  .hero__zapato { width: 300px; left: calc(50% - 190px); top: 24px; }
-  .hero__sombra { width: 275px; height: 32px; left: calc(50% - 172px); top: 192px; }
-  .hero__etiqueta { left: auto; right: 0; bottom: 0; min-width: 150px; padding: 10px 14px 10px 12px; border-radius: 3px 12px 12px 12px; }
-  .hero__etiqueta strong { font-size: 13px; }
-  .hero__etiqueta small { font-size: 10px; }
-  .hero__etiqueta b { font-size: 22px; }
-  .hero__etiqueta-rayas { width: 44px; height: 44px; }
 
   /* Secciones */
   .seccion { padding-block: 28px 4px; }
@@ -306,15 +287,12 @@ a { color: inherit; }
   /* Footer compacto: marca + redes en una fila, Tienda/Líneas lado a lado, todo más apretado */
   .footer { margin-top: 36px; }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: 22px 16px; padding-block: 26px 20px; }
-  .footer__marca { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px 12px; }
-  .footer__marca .marca img { width: 40px; height: 40px; }
-  .footer__marca .marca span { font-size: 26px; }
-  .footer__marca p { grid-column: 1 / -1; grid-row: 2; max-width: none; font-size: 13px; line-height: 1.5; }
+  .footer__marca { grid-column: 1 / -1; gap: 8px; }
   .footer__redes { gap: 6px; }
   .footer__redes a { width: 36px; height: 36px; border-radius: 10px; }
   .footer__redes svg { width: 16px; height: 16px; }
   .footer__col { gap: 8px; font-size: 13px; }
-  .footer__col h3 { font-size: 16px; margin-bottom: 2px; }
+  .footer__col h3, .footer__marca h3 { font-size: 16px; margin-bottom: 2px; }
   .footer__contacto { grid-column: 1 / -1; padding: 14px; gap: 10px; border-radius: 14px; background: var(--negro-2); border: 1px solid #262626; }
   .footer__pagos { flex-wrap: nowrap; overflow-x: auto; gap: 6px; padding-block: 14px; scrollbar-width: none; }
   .footer__pagos::-webkit-scrollbar { display: none; }
@@ -387,6 +365,7 @@ a { color: inherit; }
   .marca { gap: 8px; }
   .marca img { width: 38px; height: 38px; }
   .marca span { font-size: 24px; }
+  .marca img.marca__texto { width: auto; height: 30px; }
   .header .btn-icono { width: 38px; }
 }
 
